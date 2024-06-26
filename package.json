@@ -1,0 +1,30 @@
+{
+  "name": "ignitereact",
+  "version": "1.0.0",
+  "description": "React app Iginite",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shailendrasinghbhadoria/IgniteReact.git"
+  },
+  "author": "Shailendra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shailendrasinghbhadoria/IgniteReact/issues"
+  },
+  "homepage": "https://github.com/shailendrasinghbhadoria/IgniteReact#readme",
+  "dependencies": {
+    "parcel": "^2.12.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  },
+  "browserlist":[
+    "last 2 versions"
+  ]
+}

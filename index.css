@@ -1,3 +1,76 @@
-#heading{
-    color:red;
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin:0;
+    border:1px solid #ddd
+}
+.body{
+    border:1px solid #444;
+    padding:10px;
+    overflow-x: hidden;
+}
+.logo{max-width: 150px; max-height: 100px;}
+.nav-items > ul{
+    display: flex;
+    list-style: none;    
+}
+.nav-items > ul > li{
+    padding: 5px 10px;
+    font-size: 18px;
+}
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.res-card{
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 260px;
+    background-color: #f0f0f0;
+    margin: 10px;    
+}
+.res-card:hover{
+    background-color: #f4f4f4;
+    border:1px solid #ddd;
+    cursor: pointer;    
+}
+.card-image{
+    max-width: 250px;
+}
+.rest-name,h3,h4,h5{
+    margin: 0 0 5px;
+}
+
+.filter-btn{
+    margin: 0 10px;
+    padding: 5px;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shimmer-cards{
+    width:200px;
+    height: 300px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    border-radius:4pxl
+}
+.login{
+    padding:6px;
+    cursor: pointer;
+    min-width: 70px;
+}
+.filter{
+    display: flex;
+    margin-bottom: 15px;
+}
+.search-box{
+    padding: 5px;
+}
+.search-btn{
+    padding: 5px;
 }

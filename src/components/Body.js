@@ -1,8 +1,10 @@
-import React, {useState,useEffect} from 'react';
-import RestaurantCard from './RestaurantCard';
+import React, {useState,useEffect, useContext} from 'react';
+import RestaurantCard, {withPromptedLabel} from './RestaurantCard';
 import resObj from '../utils/mockData';
 import Shimmer from './Shimmer';
-
+import { Link } from 'react-router-dom';
+import useOnlineStatus from '../utils/useOnlineStatus' 
+import UserContext from '../utils/UserContext';
 
 const Body =()=>{
 
@@ -10,6 +12,7 @@ const Body =()=>{
     const [searchList, setSearchList] = useState([])
     const [searchText, setSearchText] = useState("")
 
+    const RestaurantCardPromoted = withPromptedLabel(RestaurantCard)
 
     useEffect(()=>{
         fetchData()
@@ -23,16 +26,21 @@ const Body =()=>{
         setSearchList(res?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     } 
 
+    const {loggedInUser, setUserName} = useContext(UserContext)
+
+    const onlineStatus = useOnlineStatus();
+    if(onlineStatus===false) return <h1>Looks like you're offline, Please check your Internet connection</h1>
+
     if(restList.length===0){
         return<Shimmer/>
     }
 
     return(
         <div className='body'>
-            <div className='filter'>
+            <div className='flex mb-4'>
                 <div className='search'>
-                    <input type='text' className='search-box' value={searchText} onChange={(e)=>setSearchText(e.target.value)}/>
-                    <button className='search-btn' onClick={()=>{
+                    <input type='text' className='mx-2 border-black border-2 rounded-sm' value={searchText} onChange={(e)=>setSearchText(e.target.value)}/>
+                    <button className='bg-blue-200 p-2 rounded-md' onClick={()=>{
 
                         const search = restList.filter((list)=> list.info.name.toLowerCase().includes(searchText.toLowerCase()))
 
@@ -40,19 +48,30 @@ const Body =()=>{
 
                     }}>Search</button>
                 </div>
-                <button className='filter-btn' onClick={()=>{
+                <button className='bg-green-200 mx-2 p-2 rounded-md' onClick={()=>{
                     let newList = restList.filter((res)=>{                        
                       return res.info.avgRating>4;                     
                    });
                    setRestList(newList)
-                }
-                }
+                }}
                 >Top Rated Restaurants</button>
+
+                <div className='mx-2'>
+                    <label>UserName : </label>
+                    <input className='border border-black p-1 rounded-sm' 
+                    value={loggedInUser} 
+                    onChange={(e)=>setUserName(e.target.value)}
+                    />
+                </div>
             </div>
-            <div className='res-container'>
+            <div className='flex flex-wrap'>
                 {   searchList.map((item, index)=>(                    
-                    <RestaurantCard key={index}
-                     resData={item}/>                    
+                   <Link key={item.info.id} to={`/restaurants/${item.info.id}`}> 
+                   {
+                    item.info.promoted?
+                    <RestaurantCardPromoted resData={item}/>:<RestaurantCard resData={item}/>
+                   } 
+                    </Link>                   
                 ))
                 }               
                 

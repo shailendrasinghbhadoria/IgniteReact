@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
 .header{
     display: flex;
     justify-content: space-between;
@@ -74,3 +79,12 @@
 .search-btn{
     padding: 5px;
 }
+
+.user-card{
+    padding:10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    width: 200px;
+}
+*/

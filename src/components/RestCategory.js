@@ -4,9 +4,7 @@ import ItemList from './ItemList'
 const RestCategory = ({menu, showItem, setShowIndex}) => {
 
  const itemList = menu?.menuItems;
-//  const [count, setCount] = useState(0)
-
-
+ 
  const handClick=()=>{    
     setShowIndex()   
   
@@ -20,7 +18,7 @@ const RestCategory = ({menu, showItem, setShowIndex}) => {
                 <span>🔽</span>
             </div>
            
-            { showItem?<ItemList list={itemList}/>:""}
+            { showItem && <ItemList list={itemList}/>}
             
         </div>
         

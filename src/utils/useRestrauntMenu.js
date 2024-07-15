@@ -12,27 +12,132 @@ const  useRestrauntMenu = (resid)=>{
             {
                 type: "type.google.ItemCategory",
                category:"Recommended",
-               menuItems:['Lemon-Rice','Handi Chikken','Chikken-Corma','Paneer-Lababda']
+               menuItems:[
+                    {
+                    disItem: 'Lemon-Rice',
+                    price: 120,
+                    img: '6e04be27387483a7c00444f8e8241108'
+                    },
+                    {
+                    disItem: 'Handi Chikken',
+                    price: 150,
+                    img: '2b4f62d606d1b2bfba9ba9e5386fabb7'
+                    },
+                    {
+                    disItem: 'Chikken-Corma',
+                    price: 160,
+                    img: '6e04be27387483a7c00444f8e8241108'
+                    },
+                    {
+                    disItem: 'Paneer-Lababda',
+                    price: 200,
+                    img: '2b4f62d606d1b2bfba9ba9e5386fabb7'
+                    }
+                ]
             },
             {
                 type: "type.google.ItemCategory",
                 category:"Newly Added",
-                menuItems:['Paneer Tikka','Paneer Tadka','Chikken-Corma','Fish']
+                menuItems:[
+                        {
+                        disItem: 'Lemon-Rice',
+                        price: 120,
+                        img: '6e04be27387483a7c00444f8e8241108'
+                        },
+                        {
+                        disItem: 'Handi Chikken',
+                        price: 150,
+                        img: '2b4f62d606d1b2bfba9ba9e5386fabb7'
+                        },
+                        {
+                        disItem: 'Chikken-Corma',
+                        price: 160,
+                        img: '6e04be27387483a7c00444f8e8241108'
+                        },
+                        {
+                        disItem: 'Paneer-Lababda',
+                        price: 200,
+                        img: '2b4f62d606d1b2bfba9ba9e5386fabb7'
+                        }
+                    ]
              },
              {
                 type: "type.google.ItemCategory",
                 category:"Todays",
-                menuItems:['Paneer Tikka','Sew Bhaji','Chikken-Corma','Chiken']
+                menuItems:[
+                    {
+                        disItem: 'Lemon-Rice',
+                        price: 120,
+                        img: '6e04be27387483a7c00444f8e8241108'
+                        },
+                        {
+                        disItem: 'Handi Chikken',
+                        price: 150,
+                        img: '2b4f62d606d1b2bfba9ba9e5386fabb7'
+                        },
+                        {
+                        disItem: 'Chikken-Corma',
+                        price: 160,
+                        img: '6e04be27387483a7c00444f8e8241108'
+                        },
+                        {
+                        disItem: 'Paneer-Lababda',
+                        price: 200,
+                        img: '2b4f62d606d1b2bfba9ba9e5386fabb7'
+                        }
+                ]
              },
              {
                 type: "type.google.ItemCategory",
                 category:"Combo - PAck",
-                menuItems:['Paneer Tikka','Sew Bhaji','Chikken-Corma','Chiken']
+                menuItems:[
+                    {
+                        disItem: 'Lemon-Rice',
+                        price: 120,
+                        img: '6e04be27387483a7c00444f8e8241108'
+                        },
+                        {
+                        disItem: 'Handi Chikken',
+                        price: 150,
+                        img: '2b4f62d606d1b2bfba9ba9e5386fabb7'
+                        },
+                        {
+                        disItem: 'Chikken-Corma',
+                        price: 160,
+                        img: '6e04be27387483a7c00444f8e8241108'
+                        },
+                        {
+                        disItem: 'Paneer-Lababda',
+                        price: 200,
+                        img: '2b4f62d606d1b2bfba9ba9e5386fabb7'
+                        }
+                ]
              },
              {
                 type: "type.google",
                 category:"No-veg",
-                menuItems:['Chikken-Corma','Chiken']
+                menuItems:[
+                    {
+                        disItem: 'Lemon-Rice',
+                        price: 120,
+                        img: '6e04be27387483a7c00444f8e8241108'
+                        },
+                        {
+                        disItem: 'Handi Chikken',
+                        price: 150,
+                        img: '2b4f62d606d1b2bfba9ba9e5386fabb7'
+                        },
+                        {
+                        disItem: 'Chikken-Corma',
+                        price: 160,
+                        img: '6e04be27387483a7c00444f8e8241108'
+                        },
+                        {
+                        disItem: 'Paneer-Lababda',
+                        price: 200,
+                        img: '2b4f62d606d1b2bfba9ba9e5386fabb7'
+                        }
+                ]
              },             
                     
                 

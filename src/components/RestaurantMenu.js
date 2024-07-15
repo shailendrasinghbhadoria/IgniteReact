@@ -21,7 +21,17 @@ const RestaurantMenu = () => {
     const {name, cuisines, costForTwo, cards} = resInfo 
     const categories = cards.filter((category)=>category.type==="type.google.ItemCategory")
 
-    console.log(categories)
+    const updateActiveIndex =(newIndex)=>{
+        // updated - opening and closing same accordion functionality.
+        if(newIndex===showIndex){
+            setShowIndex(null);
+        }else{
+            setShowIndex(newIndex)
+        }
+
+    }
+
+   
            
      return   (
             <div className='text-center my-10'>
@@ -30,9 +40,9 @@ const RestaurantMenu = () => {
                     <ul>
                         {categories.map((items, index)=>(
                            <RestCategory menu={items} 
-                            showItem={index===showIndex && true} 
-                            setShowIndex={()=>setShowIndex(index)}
-                            showIndex={showIndex}/>
+                            showItem={index === showIndex?true:false} 
+                            setShowIndex={()=>updateActiveIndex(index)}
+                            />
                         ))
 
                         }

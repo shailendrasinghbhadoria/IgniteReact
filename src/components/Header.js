@@ -3,6 +3,7 @@ import LOGO from '../../food-logo.png'
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
 import UserContext from '../utils/UserContext';
+import { useSelector } from 'react-redux';
 
 const Header =()=>{
 
@@ -12,6 +13,11 @@ const Header =()=>{
 
     const {loggedInUser} = useContext(UserContext)
    
+    //subscribing to the store using Selector
+
+    const cartItems = useSelector((store)=> store.cart.items)
+
+    console.log(cartItems)
 
     return(
         <div className='flex justify-between bg-slate-100 shadow-lg mb-8'>
@@ -25,7 +31,7 @@ const Header =()=>{
                     <li className='px-4'><Link className='border-solid border-2 border-black border-spacing-2 p-2' to={"/about"}>About Us</Link></li>
                     <li className='px-4'><Link className='border-solid border-2 border-black border-spacing-2 p-2' to={"/contact"}>Contact Us</Link></li>
                     <li className='px-4'><Link className='border-solid border-2 border-black border-spacing-2 p-2' to={"/Grocery"}>Grocery</Link></li>
-                    <li className='px-4'>Cart</li>
+                    <li className='px-4 font-bold text-xl'><Link to="/cart">Cart ({cartItems.length} items)</Link></li>
                     <button className='px-2 py-1 bg-blue-300' onClick={()=>
                        btnName==="Login"?setBtName("Logout"):setBtName("Login")}
                     >

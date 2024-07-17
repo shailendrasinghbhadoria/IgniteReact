@@ -2,7 +2,6 @@ import {Img_CDN} from "../utils/constant"
 
 const RestaurantCard =(props)=>{
     const {resData} = props;
-
     const {name,cloudinaryImageId, cuisines, costForTwo, avgRating, sla} = resData.info
 
     return (

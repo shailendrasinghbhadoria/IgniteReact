@@ -39,7 +39,7 @@ const Body =()=>{
         <div className='body'>
             <div className='flex mb-4'>
                 <div className='search'>
-                    <input type='text' className='mx-2 border-black border-2 rounded-sm' value={searchText} onChange={(e)=>setSearchText(e.target.value)}/>
+                    <input type='text' data-testid="searchInput"  className='mx-2 border-black border-2 rounded-sm' value={searchText} onChange={(e)=>setSearchText(e.target.value)}/>
                     <button className='bg-blue-200 p-2 rounded-md' onClick={()=>{
 
                         const search = restList.filter((list)=> list.info.name.toLowerCase().includes(searchText.toLowerCase()))
@@ -50,9 +50,9 @@ const Body =()=>{
                 </div>
                 <button className='bg-green-200 mx-2 p-2 rounded-md' onClick={()=>{
                     let newList = restList.filter((res)=>{                        
-                      return res.info.avgRating>4;                     
+                      return res.info.avgRating > 4.4;                     
                    });
-                   setRestList(newList)
+                   setSearchList(newList)
                 }}
                 >Top Rated Restaurants</button>
 

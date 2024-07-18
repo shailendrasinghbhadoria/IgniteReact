@@ -14,7 +14,7 @@ const ItemList = ({list}) => {
   return (
     <div>
         {list.map((item, index)=>(
-            <div key={index} className='border border-b-[#f2f2f2]'>
+            <div data-testid="foodItems"  key={index} className='border border-b-[#f2f2f2]'>
                 <div className='flex justify-between items-center'>
                   <p className=''>{item.disItem}</p>                  
                   <div className='relative'>

@@ -4,6 +4,24 @@ import "@testing-library/jest-dom"
 
 
 describe("Contact Us Page Test Case", ()=>{
+
+    // beforeAll(()=>{
+    //     console.log("Before ALl");
+    // })
+
+    // beforeEach(()=>{
+    //     console.log("Before Each");
+    // })
+
+    // afterEach(()=>{
+    //     console.log("After Each");
+    // })
+
+    // afterAll(()=>{
+    //     console.log("After All");
+    // })
+
+
     test("Should load contact us component",()=>{
         render(<Contact/>)
         const heading = screen.getByRole("heading")
